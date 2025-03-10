@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "eFBznQsSzoQpR9scvCEMGM/gqgqd4u3D4x78Nuvu/8o=",
+  "Source": "SqlParserBackend",
+  "BasePath": "_content/SqlParserBackend",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
