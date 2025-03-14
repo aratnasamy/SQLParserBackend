@@ -12,4 +12,5 @@ using System.Text.Json.Serialization;
 [JsonDerivedType(typeof(SimpleCaseExpressionItem), "SimpleCaseExpressionItem")]
 public interface IExpressionItem
 {
+    string? ToString();
 }

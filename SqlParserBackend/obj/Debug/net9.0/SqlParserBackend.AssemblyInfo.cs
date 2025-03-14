@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SqlParserBackend")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+b7faf2ca993bd168240e14bd0fe23cfd3e514234")]
 [assembly: System.Reflection.AssemblyProductAttribute("SqlParserBackend")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SqlParserBackend")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

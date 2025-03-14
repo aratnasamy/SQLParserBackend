@@ -584,7 +584,7 @@ public class ParseSQLService : IParseSQLService
             }
             outptr++;
             if(sql[outptr].ToUpper() == "ALL" || sql[outptr].ToUpper() == "DISTINCT" || sql[outptr].ToUpper() == "UNIQUE") {
-                q.selectModifier = sql[outptr];
+                q.selectModifier = sql[outptr].ToUpper();
                 outptr++;
             }
             if (SelectList(sql,outptr,out int x2,out List<SelectItem> y2)) {
@@ -2161,17 +2161,17 @@ public class ParseSQLService : IParseSQLService
         try
         {
             while(true) {
-                if (SimpleExpression(sql,outptr,out int x,out IExpressionItem y)) {
+                if (CaseExpression(sql,outptr,out int x3,out IExpressionItem y3)) {
+                    outptr = x3;
+                    ei.expressionItems.Add(y3);
+                }
+                else if (SimpleExpression(sql,outptr,out int x,out IExpressionItem y)) {
                     outptr = x;
                     ei.expressionItems.Add(y);
                 }
                 else if (CompoundExpression(sql,outptr,out int x2,out IExpressionItem y2)) {
                     outptr = x2;
                     ei.expressionItems.Add(y2);
-                }
-                else if (CaseExpression(sql,outptr,out int x3,out IExpressionItem y3)) {
-                    outptr = x3;
-                    ei.expressionItems.Add(y3);
                 }
                 else if (FunctionExpression(sql,outptr,out int x4,out IExpressionItem y4)) {
                     outptr = x4;
@@ -2529,8 +2529,7 @@ public class ParseSQLService : IParseSQLService
                         if(parenthesesDepth == 0) {
                             temp.Add("#EOF");
                             outptr++;
-                            if (SubQuery(sql,outptr,out int x, out Query y)) {
-                                outptr = x;
+                            if (SubQuery(temp,0,out _, out Query y)) {
                                 sqe.subQuery = y;
                                 return true;
                             }

@@ -31,3 +31,4 @@
 /Users/alexanderratnasamy/Documents/SqlParserBackend/SqlParserBackend/obj/Debug/net9.0/SqlParserBackend.pdb
 /Users/alexanderratnasamy/Documents/SqlParserBackend/SqlParserBackend/obj/Debug/net9.0/SqlParserBackend.genruntimeconfig.cache
 /Users/alexanderratnasamy/Documents/SqlParserBackend/SqlParserBackend/obj/Debug/net9.0/ref/SqlParserBackend.dll
+/Users/alexanderratnasamy/Documents/SqlParserBackend/SqlParserBackend/obj/Debug/net9.0/SqlParserBackend.sourcelink.json

@@ -22,6 +22,7 @@ builder.Services.AddCors(options =>
 });
 // Add services to the container.
 builder.Services.AddTransient<IParseSQLService,ParseSQLService>();
+builder.Services.AddTransient<ICreateTableGraphService,CreateTableGraphService>();
 builder.Services.AddControllers()
     .AddJsonOptions(options => 
     {
